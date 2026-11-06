@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Kamea Tara Business Consultant</title>
+    <meta name="description" content="Business Name Registration, Company Registration, Association Registration, Constitution write-up, Logo design, Profile development and bank account support in Papua New Guinea.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <style>
+        :root {
+            --primary: #1b6b3a; --primary-dark: #0f4a28; --primary-light: #2e8b57;
+            --accent: #e8a317; --accent-hover: #d4920f; --accent-light: rgba(232,163,23,0.15);
+            --blue: #1a5f9e; --blue-dark: #0d3d6b;
+            --text: #1a1a2e; --text-light: #4a5568; --bg: #f7f9f8; --white: #ffffff;
+            --border: #e2e8f0; --shadow: 0 4px 24px rgba(27,107,58,0.08); --shadow-lg: 0 12px 40px rgba(27,107,58,0.14);
+            --radius: 14px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.7; padding-bottom: 80px; }
+        h1,h2,h3,h4 { font-family: 'Poppins', sans-serif; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; color: inherit; }
+
+        .floating-contact { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: white; z-index: 9999; box-shadow: 0 -4px 30px rgba(0,0,0,0.25); padding: 10px 0; }
+        .floating-contact .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .fc-left { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+        .fc-item { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 500; }
+        .fc-item a { color: white; } .fc-item a:hover { color: var(--accent); }
+        .fc-icon { width: 32px; height: 32px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; }
+        .fc-cta { background: var(--accent); color: var(--primary-dark); padding: 10px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; transition: all 0.25s; box-shadow: 0 4px 15px rgba(232,163,23,0.4); }
+        .fc-cta:hover { background: #ffb82e; transform: translateY(-2px); }
+        .wa-float { position: fixed; bottom: 80px; right: 22px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 25px rgba(37,211,102,0.45); z-index: 9998; transition: transform 0.25s; animation: pulse-wa 2.5s infinite; }
+        .wa-float:hover { transform: scale(1.1); } .wa-float svg { width: 32px; height: 32px; fill: white; }
+        @keyframes pulse-wa { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 0 0 18px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+
+        header { background: var(--primary); color: white; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 24px rgba(0,0,0,0.2); }
+        .header-top { background: rgba(0,0,0,0.25); padding: 7px 0; font-size: 0.8rem; }
+        .header-top .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+        .header-top a { color: rgba(255,255,255,0.9); } .header-top a:hover { color: var(--accent); }
+        .nav-main { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo img { width: 58px; height: 58px; object-fit: contain; border-radius: 50%; background: white; padding: 3px; box-shadow: 0 0 0 3px rgba(232,163,23,0.35); }
+        .logo-text h1 { font-size: 1.22rem; font-weight: 800; line-height: 1.15; }
+        .logo-text span { font-size: 0.68rem; opacity: 0.85; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; }
+        .desktop-nav { display: flex; list-style: none; gap: 2px; }
+        .desktop-nav a { color: rgba(255,255,255,0.9); padding: 8px 13px; border-radius: 7px; font-size: 0.88rem; font-weight: 500; transition: all 0.2s; }
+        .desktop-nav a:hover, .desktop-nav a.active { background: rgba(255,255,255,0.14); color: white; }
+        .mobile-toggle { display: none; background: none; border: none; color: white; font-size: 1.7rem; cursor: pointer; padding: 6px; }
+
+        .mobile-menu { display: none; position: fixed; inset: 0; z-index: 2000; background: var(--primary-dark); flex-direction: column; overflow-y: auto; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .mobile-close { background: none; border: none; color: white; font-size: 1.9rem; cursor: pointer; }
+        .mobile-nav { list-style: none; padding: 16px 12px 30px; }
+        .mobile-nav a { display: block; color: white; padding: 14px 16px; font-size: 1.08rem; font-weight: 500; border-radius: 8px; }
+        .mobile-nav a:hover, .mobile-nav a.active { background: rgba(255,255,255,0.1); }
+        .mobile-contact-block { margin: 10px 20px 30px; padding: 18px; background: rgba(255,255,255,0.08); border-radius: 12px; color: rgba(255,255,255,0.9); font-size: 0.92rem; }
+        .mobile-contact-block a { color: var(--accent); font-weight: 600; }
+
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white; padding: 60px 0 50px; text-align: center;
+        }
+        .page-hero h1 { font-size: 2.3rem; margin-bottom: 12px; }
+        .page-hero p { opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.08rem; }
+
+        section { padding: 60px 0; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 1.85rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 12px; }
+        .section-title .line { width: 70px; height: 4px; background: var(--accent); margin: 0 auto 16px; border-radius: 2px; }
+        .section-title p { color: var(--text-light); max-width: 640px; margin: 0 auto; }
+
+        .service-detail {
+            background: white;
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            margin-bottom: 36px;
+        }
+        .service-detail .header-row {
+            display: flex; align-items: flex-start; gap: 20px; margin-bottom: 24px;
+            padding-bottom: 20px; border-bottom: 2px solid var(--accent-light);
+        }
+        .service-detail .icon-box {
+            width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white; border-radius: 16px; display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; flex-shrink: 0;
+        }
+        .service-detail h2 { font-size: 1.6rem; color: var(--primary-dark); margin-bottom: 6px; }
+        .service-detail .tag { display: inline-block; background: var(--accent-light); color: var(--primary-dark); padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; }
+        .service-detail p { color: var(--text-light); margin-bottom: 16px; }
+        .service-detail h3 { font-size: 1.15rem; color: var(--primary-dark); margin: 24px 0 12px; }
+        .service-detail ul { margin: 0 0 16px 20px; color: var(--text-light); }
+        .service-detail li { margin-bottom: 8px; }
+        .include-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 20px 0;
+        }
+        .include-item {
+            background: var(--bg); border-radius: 10px; padding: 14px 16px;
+            display: flex; align-items: center; gap: 10px; font-size: 0.94rem;
+        }
+        .include-item span { color: var(--primary); font-weight: 700; font-size: 1.1rem; }
+
+        .process-box {
+            background: linear-gradient(135deg, #f0f7f3, #e8f5ee);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 12px 12px 0;
+            padding: 22px 24px; margin: 24px 0;
+        }
+        .process-box h4 { color: var(--primary-dark); margin-bottom: 10px; }
+        .process-box ol { margin-left: 20px; color: var(--text-light); }
+        .process-box li { margin-bottom: 6px; }
+
+        .note-box {
+            background: #fff9e6; border: 1px solid var(--accent); border-radius: 12px;
+            padding: 18px 22px; margin: 20px 0; font-size: 0.95rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white; border-radius: 20px; padding: 48px 40px; text-align: center;
+        }
+        .cta-section h2 { font-size: 1.8rem; margin-bottom: 14px; }
+        .cta-section p { opacity: 0.92; margin-bottom: 24px; max-width: 540px; margin-left: auto; margin-right: auto; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 26px; border-radius: 50px; font-weight: 700; font-size: 0.95rem;
+            transition: all 0.25s; border: 2px solid transparent;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary-dark); }
+        .btn-primary:hover { background: #ffb82e; transform: translateY(-2px); }
+        .btn-outline { background: transparent; border-color: rgba(255,255,255,0.5); color: white; }
+        .btn-outline:hover { background: rgba(255,255,255,0.12); border-color: white; }
+        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+        footer { background: var(--primary-dark); color: rgba(255,255,255,0.85); padding: 60px 0 100px; }
+        .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand img { width: 70px; height: 70px; border-radius: 50%; background: white; padding: 4px; margin-bottom: 14px; }
+        .footer-brand h3 { color: white; font-size: 1.15rem; margin-bottom: 10px; }
+        .footer-brand p { font-size: 0.9rem; opacity: 0.8; line-height: 1.6; }
+        .footer-col h4 { color: var(--accent); font-size: 1rem; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; font-size: 0.9rem; }
+        .footer-col a:hover { color: var(--accent); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.85rem; opacity: 0.75; }
+
+        @media (max-width: 900px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .desktop-nav { display: none; }
+            .mobile-toggle { display: block; }
+            .service-detail .header-row { flex-direction: column; }
+        }
+        @media (max-width: 600px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .fc-left { display: none; }
+            .floating-contact .container { justify-content: center; }
+            .page-hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-contact">
+        <div class="container">
+            <div class="fc-left">
+                <div class="fc-item"><div class="fc-icon">📞</div><a href="tel:+67579838762">7983 8762</a></div>
+                <div class="fc-item"><div class="fc-icon">💬</div><a href="https://wa.me/67572825257" target="_blank">WhatsApp 7282 5257</a></div>
+                <div class="fc-item"><div class="fc-icon">📍</div><span>Lae & Wewak Town</span></div>
+            </div>
+            <a href="https://wa.me/67572825257?text=Hello%20Kamea%20Tara%2C%20I%20need%20help%20with%20business%20registration" class="fc-cta" target="_blank">Register Now →</a>
+        </div>
+    </div>
+
+    <a href="https://wa.me/67572825257?text=Hello%20Kamea%20Tara%2C%20I%20need%20help%20with%20business%20registration" class="wa-float" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div>Your trusted partner for business registration & project proposals</div>
+                <div>
+                    <a href="tel:+67579838762">📞 7983 8762</a> &nbsp;|&nbsp;
+                    <a href="https://wa.me/67572825257" target="_blank">WhatsApp 7282 5257</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="nav-main">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Kamea Tara Logo">
+                    <div class="logo-text">
+                        <h1>Kamea Tara</h1>
+                        <span>Business Consultant</span>
+                    </div>
+                </a>
+                <ul class="desktop-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="proposals.html">Proposals</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-toggle" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" style="width:48px;height:48px;">
+                <div class="logo-text">
+                    <h1 style="font-size:1.1rem;">Kamea Tara</h1>
+                    <span>Business Consultant</span>
+                </div>
+            </div>
+            <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">×</button>
+        </div>
+        <ul class="mobile-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="proposals.html">Proposals</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-contact-block">
+            <strong>Quick Contact</strong><br>
+            Digicel: <a href="tel:+67579838762">7983 8762</a><br>
+            WhatsApp: <a href="https://wa.me/67572825257">7282 5257</a><br>
+            Email: <a href="mailto:tarabusinessconsultant44@gmail.com">tarabusinessconsultant44@gmail.com</a>
+        </div>
+    </div>
+
+    <div class="page-hero">
+        <div class="container">
+            <h1>Our Professional Services</h1>
+            <p>Complete SME business registration, association setup, constitution writing and supporting services designed for Papua New Guinea entrepreneurs and community groups.</p>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <!-- 1. BUSINESS NAME -->
+            <div class="service-detail" id="business-name">
+                <div class="header-row">
+                    <div class="icon-box">📝</div>
+                    <div>
+                        <h2>1. Business Name Registration</h2>
+                        <span class="tag">Ideal for Sole Traders & Partnerships</span>
+                    </div>
+                </div>
+                <p>Business Name Registration is the most common and accessible way for individuals and small partnerships to formalise their trading name in Papua New Guinea. Once registered with the Investment Promotion Authority (IPA), your business name is protected and you can open a bank account, issue invoices, and apply for many forms of support under that name.</p>
+                <p>At Kamea Tara we manage the entire process so you do not have to navigate government forms alone. We prepare the application, advise on name availability, and coordinate the related documents that make your business look professional from the start.</p>
+
+                <h3>What is Included</h3>
+                <div class="include-grid">
+                    <div class="include-item"><span>✓</span> IPA Business Name Registration</div>
+                    <div class="include-item"><span>✓</span> IRC TIN Registration</div>
+                    <div class="include-item"><span>✓</span> Professional Logo Design</div>
+                    <div class="include-item"><span>✓</span> Letterhead Design</div>
+                    <div class="include-item"><span>✓</span> Business Profile Development</div>
+                    <div class="include-item"><span>✓</span> Account Opening Assistance</div>
+                </div>
+
+                <div class="process-box">
+                    <h4>Typical Steps We Follow</h4>
+                    <ol>
+                        <li>Discuss your business activity and preferred trading name</li>
+                        <li>Check name availability and advise on alternatives if needed</li>
+                        <li>Prepare and lodge the IPA Business Name application</li>
+                        <li>Assist with IRC TIN application</li>
+                        <li>Design logo and letterhead to match your brand</li>
+                        <li>Develop a concise business profile</li>
+                        <li>Guide you on bank account requirements once certificates are ready</li>
+                    </ol>
+                </div>
+
+                <div class="note-box">
+                    <strong>Who should choose Business Name Registration?</strong> Sole traders, family businesses, small retail and service operators, market vendors expanding, and anyone who wants a simple, lower-cost formal structure without the complexity of a limited company.
+                </div>
+            </div>
+
+            <!-- 2. COMPANY -->
+            <div class="service-detail" id="company">
+                <div class="header-row">
+                    <div class="icon-box">🏢</div>
+                    <div>
+                        <h2>2. Company Registration</h2>
+                        <span class="tag">Limited Liability & Stronger Credibility</span>
+                    </div>
+                </div>
+                <p>Registering a company creates a separate legal entity. This structure is preferred by many entrepreneurs who plan to grow, seek larger contracts, work with government or corporate clients, or want the protection of limited liability. A company also presents a more formal image to banks, suppliers and partners.</p>
+                <p>Kamea Tara handles the full company incorporation process with IPA and the related IRC requirements, while also delivering the branding and profile materials that help your new company look established from day one.</p>
+
+                <h3>What is Included</h3>
+                <div class="include-grid">
+                    <div class="include-item"><span>✓</span> IPA Company Registration</div>
+                    <div class="include-item"><span>✓</span> IRC TIN Certificate</div>
+                    <div class="include-item"><span>✓</span> Logo Design</div>
+                    <div class="include-item"><span>✓</span> Letterhead Design</div>
+                    <div class="include-item"><span>✓</span> Company Profile Development</div>
+                </div>
+
+                <h3>Key Benefits of a Company Structure</h3>
+                <ul>
+                    <li>Limited liability protection for shareholders in most situations</li>
+                    <li>Stronger credibility when bidding for contracts or partnerships</li>
+                    <li>Easier to bring in additional shareholders or investors later</li>
+                    <li>Clear separation between personal and business assets</li>
+                    <li>Preferred structure for many formal funding and procurement processes</li>
+                </ul>
+
+                <div class="process-box">
+                    <h4>What We Need From You</h4>
+                    <ol>
+                        <li>Proposed company name (and alternatives)</li>
+                        <li>Details of directors and shareholders</li>
+                        <li>Registered office address</li>
+                        <li>Nature of business activities</li>
+                        <li>Share capital structure (we can advise on simple structures)</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- 3. PROPOSAL WRITING (brief on this page) -->
+            <div class="service-detail" id="proposals">
+                <div class="header-row">
+                    <div class="icon-box">📋</div>
+                    <div>
+                        <h2>3. Proposal Writing</h2>
+                        <span class="tag">Government • Donor • Corporate • Individual</span>
+                    </div>
+                </div>
+                <p>A well-written proposal is often the difference between securing funding and being overlooked. We prepare clear, professional project proposals tailored to the expectations of government departments, donor agencies, corporate social responsibility programmes and individual funders.</p>
+                <p>Our proposals typically cover the problem statement, project objectives, activities, implementation plan, budget, expected outcomes and sustainability. We work with the information you provide and structure it so reviewers can quickly understand the value of your initiative.</p>
+                <p>For a full overview of proposal types and sectors we support, please visit our <a href="proposals.html" style="color:var(--primary); font-weight:600;">dedicated Proposals page</a>.</p>
+            </div>
+
+            <!-- 4. CONSTITUTION -->
+            <div class="service-detail" id="constitution">
+                <div class="header-row">
+                    <div class="icon-box">📜</div>
+                    <div>
+                        <h2>4. Constitution Write-Up</h2>
+                        <span class="tag">Business Groups • Societies • Associations</span>
+                    </div>
+                </div>
+                <p>A clear constitution is essential for any group that wants to operate formally, open a bank account in the group’s name, receive grants, or register with IPA. A good constitution sets out the purpose of the group, membership rules, leadership structure, decision-making processes, and how funds are managed.</p>
+                <p>We prepare practical constitutions that meet IPA expectations while remaining understandable to members. We avoid overly complex legal language and focus on rules that actually help the group function smoothly and reduce the risk of internal disputes.</p>
+
+                <h3>Types of Constitutions We Prepare</h3>
+                <div class="include-grid">
+                    <div class="include-item"><span>✓</span> Business Group Constitutions</div>
+                    <div class="include-item"><span>✓</span> Corporate Society Rules</div>
+                    <div class="include-item"><span>✓</span> Association Constitutions</div>
+                </div>
+
+                <h3>Typical Contents of a Constitution We Draft</h3>
+                <ul>
+                    <li>Name and objectives of the group or association</li>
+                    <li>Membership eligibility, admission and cessation</li>
+                    <li>Office bearers, their roles and election processes</li>
+                    <li>Meetings (annual general meeting, executive meetings, special meetings)</li>
+                    <li>Quorum and voting procedures</li>
+                    <li>Financial management and banking arrangements</li>
+                    <li>Amendment procedures</li>
+                    <li>Dissolution and distribution of assets</li>
+                </ul>
+
+                <div class="note-box">
+                    <strong>Important:</strong> A constitution is a living document. We encourage groups to discuss the draft with members before finalising so that everyone understands and accepts the rules. This reduces future conflict.
+                </div>
+            </div>
+
+            <!-- 5. ASSOCIATION -->
+            <div class="service-detail" id="association">
+                <div class="header-row">
+                    <div class="icon-box">🤝</div>
+                    <div>
+                        <h2>5. Association Registration</h2>
+                        <span class="tag">Full Package for Formal Associations</span>
+                    </div>
+                </div>
+                <p>Association registration is ideal for community groups, women’s associations, youth groups, church-based organisations, cooperatives and other collective bodies that want to operate with official recognition. Registration allows the association to hold assets, open bank accounts, enter into agreements and apply for funding in its own name.</p>
+                <p>The process involves more steps than a simple business name, including public advertisement for objections. We manage the full sequence so your group can focus on its mission rather than paperwork.</p>
+
+                <h3>Complete Association Package Includes</h3>
+                <div class="include-grid">
+                    <div class="include-item"><span>✓</span> Lodgement and IPA Certificates</div>
+                    <div class="include-item"><span>✓</span> Advertisement for Objection or Rejection</div>
+                    <div class="include-item"><span>✓</span> IRC TIN</div>
+                    <div class="include-item"><span>✓</span> Logo and Letterhead Design</div>
+                    <div class="include-item"><span>✓</span> Profile Development</div>
+                    <div class="include-item"><span>✓</span> Constitution Write-Up</div>
+                    <div class="include-item"><span>✓</span> Account Opening Support</div>
+                </div>
+
+                <div class="process-box">
+                    <h4>Overview of the Association Registration Journey</h4>
+                    <ol>
+                        <li>Initial discussion about the purpose and membership of the association</li>
+                        <li>Drafting of the constitution and collection of member details</li>
+                        <li>Preparation of all IPA application documents</li>
+                        <li>Lodgement and coordination of the required public advertisement</li>
+                        <li>Follow-up until certificates are issued</li>
+                        <li>TIN registration and branding package delivery</li>
+                        <li>Guidance on opening the association bank account</li>
+                    </ol>
+                </div>
+
+                <p>Whether your group is newly formed or has been operating informally for years, we can help bring it under a proper legal structure that protects members and opens doors to formal opportunities.</p>
+            </div>
+
+            <!-- ADDITIONAL SUPPORT -->
+            <div class="service-detail">
+                <div class="header-row">
+                    <div class="icon-box">🎨</div>
+                    <div>
+                        <h2>Supporting Services</h2>
+                        <span class="tag">Logo • Letterhead • Profile • Bank Support</span>
+                    </div>
+                </div>
+                <p>Registration is only the beginning. A professional appearance and the ability to manage money are equally important. That is why most of our packages include branding and practical support.</p>
+
+                <h3>Logo Design</h3>
+                <p>We create simple, memorable logos suitable for business cards, letterheads, signage and social media. The design reflects the nature of your business or group and works in both colour and black-and-white.</p>
+
+                <h3>Letterhead Design</h3>
+                <p>A clean letterhead with your logo, contact details and registration information helps every official letter and proposal look professional. We provide print-ready and digital versions.</p>
+
+                <h3>Business / Association Profile</h3>
+                <p>A short, well-written profile introduces your organisation to banks, funders, partners and clients. It typically covers who you are, what you do, where you operate, and your key strengths.</p>
+
+                <h3>Bank Account Opening Assistance</h3>
+                <p>Once you have your IPA certificate and TIN, we advise on the usual documents banks request and how to present your application clearly. This reduces the chance of being turned away or asked to return with missing papers.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding-top:0;">
+        <div class="container">
+            <div class="cta-section">
+                <h2>Ready to Formalise Your Business or Group?</h2>
+                <p>Contact us today for a clear discussion about the right registration path and a transparent outline of next steps.</p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                    <a href="https://wa.me/67572825257?text=Hello%20Kamea%20Tara%2C%20I%20want%20to%20know%20more%20about%20your%20services" class="btn btn-outline" target="_blank">WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Kamea Tara Logo">
+                    <h3>Kamea Tara Business Consultant</h3>
+                    <p>PNG SME Support Services. Your trusted partner for business registration and project proposals across Papua New Guinea.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#business-name">Business Name Registration</a></li>
+                        <li><a href="services.html#company">Company Registration</a></li>
+                        <li><a href="services.html#association">Association Registration</a></li>
+                        <li><a href="proposals.html">Project Proposals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📞 Digicel: <a href="tel:+67579838762">7983 8762</a></li>
+                        <li>📱 Vodafone: <a href="tel:+67582699682">8269 9682</a></li>
+                        <li>💬 WhatsApp: <a href="https://wa.me/67572825257">7282 5257</a></li>
+                        <li>✉️ <a href="mailto:tarabusinessconsultant44@gmail.com">Email Us</a></li>
+                        <li>📍 Wewak Town Agent Available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Kamea Tara Business Consultant. All rights reserved.</span>
+                <span>Now serving Wewak Town & surrounding areas • Nationwide Online Service</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Proposals | Kamea Tara Business Consultant</title>
+    <meta name="description" content="Professional project proposal writing for government, donor, corporate and individual funding in Papua New Guinea. Agriculture, infrastructure, community development and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <style>
+        :root {
+            --primary: #1b6b3a; --primary-dark: #0f4a28; --primary-light: #2e8b57;
+            --accent: #e8a317; --accent-hover: #d4920f; --accent-light: rgba(232,163,23,0.15);
+            --blue: #1a5f9e; --blue-dark: #0d3d6b;
+            --text: #1a1a2e; --text-light: #4a5568; --bg: #f7f9f8; --white: #ffffff;
+            --border: #e2e8f0; --shadow: 0 4px 24px rgba(27,107,58,0.08); --shadow-lg: 0 12px 40px rgba(27,107,58,0.14);
+            --radius: 14px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.7; padding-bottom: 80px; }
+        h1,h2,h3,h4 { font-family: 'Poppins', sans-serif; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; color: inherit; }
+
+        .floating-contact { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: white; z-index: 9999; box-shadow: 0 -4px 30px rgba(0,0,0,0.25); padding: 10px 0; }
+        .floating-contact .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .fc-left { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+        .fc-item { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 500; }
+        .fc-item a { color: white; } .fc-item a:hover { color: var(--accent); }
+        .fc-icon { width: 32px; height: 32px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; }
+        .fc-cta { background: var(--accent); color: var(--primary-dark); padding: 10px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; transition: all 0.25s; box-shadow: 0 4px 15px rgba(232,163,23,0.4); }
+        .fc-cta:hover { background: #ffb82e; transform: translateY(-2px); }
+        .wa-float { position: fixed; bottom: 80px; right: 22px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 25px rgba(37,211,102,0.45); z-index: 9998; transition: transform 0.25s; animation: pulse-wa 2.5s infinite; }
+        .wa-float:hover { transform: scale(1.1); } .wa-float svg { width: 32px; height: 32px; fill: white; }
+        @keyframes pulse-wa { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 0 0 18px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+
+        header { background: var(--primary); color: white; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 24px rgba(0,0,0,0.2); }
+        .header-top { background: rgba(0,0,0,0.25); padding: 7px 0; font-size: 0.8rem; }
+        .header-top .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+        .header-top a { color: rgba(255,255,255,0.9); } .header-top a:hover { color: var(--accent); }
+        .nav-main { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo img { width: 58px; height: 58px; object-fit: contain; border-radius: 50%; background: white; padding: 3px; box-shadow: 0 0 0 3px rgba(232,163,23,0.35); }
+        .logo-text h1 { font-size: 1.22rem; font-weight: 800; line-height: 1.15; }
+        .logo-text span { font-size: 0.68rem; opacity: 0.85; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; }
+        .desktop-nav { display: flex; list-style: none; gap: 2px; }
+        .desktop-nav a { color: rgba(255,255,255,0.9); padding: 8px 13px; border-radius: 7px; font-size: 0.88rem; font-weight: 500; transition: all 0.2s; }
+        .desktop-nav a:hover, .desktop-nav a.active { background: rgba(255,255,255,0.14); color: white; }
+        .mobile-toggle { display: none; background: none; border: none; color: white; font-size: 1.7rem; cursor: pointer; padding: 6px; }
+
+        .mobile-menu { display: none; position: fixed; inset: 0; z-index: 2000; background: var(--primary-dark); flex-direction: column; overflow-y: auto; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .mobile-close { background: none; border: none; color: white; font-size: 1.9rem; cursor: pointer; }
+        .mobile-nav { list-style: none; padding: 16px 12px 30px; }
+        .mobile-nav a { display: block; color: white; padding: 14px 16px; font-size: 1.08rem; font-weight: 500; border-radius: 8px; }
+        .mobile-nav a:hover, .mobile-nav a.active { background: rgba(255,255,255,0.1); }
+        .mobile-contact-block { margin: 10px 20px 30px; padding: 18px; background: rgba(255,255,255,0.08); border-radius: 12px; color: rgba(255,255,255,0.9); font-size: 0.92rem; }
+        .mobile-contact-block a { color: var(--accent); font-weight: 600; }
+
+        .page-hero {
+            background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+            color: white; padding: 60px 0 50px; text-align: center;
+        }
+        .page-hero h1 { font-size: 2.3rem; margin-bottom: 12px; }
+        .page-hero p { opacity: 0.9; max-width: 640px; margin: 0 auto; font-size: 1.08rem; }
+
+        section { padding: 60px 0; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 1.85rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 12px; }
+        .section-title .line { width: 70px; height: 4px; background: var(--accent); margin: 0 auto 16px; border-radius: 2px; }
+        .section-title p { color: var(--text-light); max-width: 640px; margin: 0 auto; }
+
+        .funding-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; margin-bottom: 40px;
+        }
+        .funding-card {
+            background: white; border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow);
+            border: 1px solid var(--border); text-align: center; transition: all 0.3s;
+        }
+        .funding-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .funding-card .icon { font-size: 2.2rem; margin-bottom: 14px; }
+        .funding-card h3 { font-size: 1.15rem; color: var(--primary-dark); margin-bottom: 10px; }
+        .funding-card p { font-size: 0.92rem; color: var(--text-light); }
+
+        .sector-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
+        }
+        .sector-card {
+            background: white; border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        .sector-card h3 { font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .sector-card p { font-size: 0.92rem; color: var(--text-light); }
+
+        .content-block {
+            background: white; border-radius: var(--radius); padding: 36px; box-shadow: var(--shadow);
+            border: 1px solid var(--border); margin-bottom: 28px;
+        }
+        .content-block h3 { color: var(--primary-dark); font-size: 1.3rem; margin-bottom: 14px; }
+        .content-block p { color: var(--text-light); margin-bottom: 14px; }
+        .content-block ul, .content-block ol { margin: 12px 0 12px 22px; color: var(--text-light); }
+        .content-block li { margin-bottom: 8px; }
+
+        .process-steps {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; counter-reset: step;
+        }
+        .process-step {
+            background: white; border-radius: var(--radius); padding: 24px 18px; box-shadow: var(--shadow);
+            border: 1px solid var(--border); text-align: center; position: relative;
+        }
+        .process-step::before {
+            counter-increment: step; content: counter(step);
+            position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+            width: 32px; height: 32px; background: var(--accent); color: var(--primary-dark);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 0.95rem;
+        }
+        .process-step h4 { margin-top: 10px; margin-bottom: 8px; color: var(--primary-dark); font-size: 1rem; }
+        .process-step p { font-size: 0.88rem; color: var(--text-light); }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+            color: white; border-radius: 20px; padding: 48px 40px; text-align: center;
+        }
+        .cta-section h2 { font-size: 1.8rem; margin-bottom: 14px; }
+        .cta-section p { opacity: 0.92; margin-bottom: 24px; max-width: 540px; margin-left: auto; margin-right: auto; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 26px; border-radius: 50px; font-weight: 700; font-size: 0.95rem;
+            transition: all 0.25s; border: 2px solid transparent;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary-dark); }
+        .btn-primary:hover { background: #ffb82e; transform: translateY(-2px); }
+        .btn-outline { background: transparent; border-color: rgba(255,255,255,0.5); color: white; }
+        .btn-outline:hover { background: rgba(255,255,255,0.12); border-color: white; }
+        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+        footer { background: var(--primary-dark); color: rgba(255,255,255,0.85); padding: 60px 0 100px; }
+        .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand img { width: 70px; height: 70px; border-radius: 50%; background: white; padding: 4px; margin-bottom: 14px; }
+        .footer-brand h3 { color: white; font-size: 1.15rem; margin-bottom: 10px; }
+        .footer-brand p { font-size: 0.9rem; opacity: 0.8; line-height: 1.6; }
+        .footer-col h4 { color: var(--accent); font-size: 1rem; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; font-size: 0.9rem; }
+        .footer-col a:hover { color: var(--accent); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.85rem; opacity: 0.75; }
+
+        @media (max-width: 900px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .desktop-nav { display: none; }
+            .mobile-toggle { display: block; }
+        }
+        @media (max-width: 600px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .fc-left { display: none; }
+            .floating-contact .container { justify-content: center; }
+            .page-hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-contact">
+        <div class="container">
+            <div class="fc-left">
+                <div class="fc-item"><div class="fc-icon">📞</div><a href="tel:+67579838762">7983 8762</a></div>
+                <div class="fc-item"><div class="fc-icon">💬</div><a href="https://wa.me/67572825257" target="_blank">WhatsApp 7282 5257</a></div>
+                <div class="fc-item"><div class="fc-icon">📍</div><span>Lae & Wewak Town</span></div>
+            </div>
+            <a href="https://wa.me/67572825257?text=Hello%20Kamea%20Tara%2C%20I%20need%20a%20project%20proposal" class="fc-cta" target="_blank">Get Proposal Help →</a>
+        </div>
+    </div>
+
+    <a href="https://wa.me/67572825257?text=Hello%20Kamea%20Tara%2C%20I%20need%20a%20project%20proposal" class="wa-float" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div>Your trusted partner for business registration & project proposals</div>
+                <div>
+                    <a href="tel:+67579838762">📞 7983 8762</a> &nbsp;|&nbsp;
+                    <a href="https://wa.me/67572825257" target="_blank">WhatsApp 7282 5257</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="nav-main">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Kamea Tara Logo">
+                    <div class="logo-text">
+                        <h1>Kamea Tara</h1>
+                        <span>Business Consultant</span>
+                    </div>
+                </a>
+                <ul class="desktop-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="proposals.html" class="active">Proposals</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-toggle" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" style="width:48px;height:48px;">
+                <div class="logo-text">
+                    <h1 style="font-size:1.1rem;">Kamea Tara</h1>
+                    <span>Business Consultant</span>
+                </div>
+            </div>
+            <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">×</button>
+        </div>
+        <ul class="mobile-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="proposals.html" class="active">Proposals</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-contact-block">
+            <strong>Quick Contact</strong><br>
+            Digicel: <a href="tel:+67579838762">7983 8762</a><br>
+            WhatsApp: <a href="https://wa.me/67572825257">7282 5257</a><br>
+            Email: <a href="mailto:tarabusinessconsultant44@gmail.com">tarabusinessconsultant44@gmail.com</a>
+        </div>
+    </div>
+
+    <div class="page-hero">
+        <div class="container">
+            <h1>Professional Project Proposals</h1>
+            <p>Clear, well-structured funding proposals prepared for government, donor, corporate and individual funding sources across Papua New Guinea.</p>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Types of Funding We Write For</h2>
+                <div class="line"></div>
+                <p>Different funders have different expectations. We tailor the language, structure and emphasis of each proposal to the audience.</p>
+            </div>
+            <div class="funding-grid">
+                <div class="funding-card">
+                    <div class="icon">🏛️</div>
+                    <h3>Government Funding</h3>
+                    <p>Proposals aligned with national and provincial development priorities, departmental guidelines and public sector reporting styles.</p>
+                </div>
+                <div class="funding-card">
+                    <div class="icon">🌍</div>
+                    <h3>Donor Funding</h3>
+                    <p>Documents suited to international and local NGOs, development partners and grant-making organisations, focusing on impact and accountability.</p>
+                </div>
+                <div class="funding-card">
+                    <div class="icon">🏢</div>
+                    <h3>Corporate Funding</h3>
+                    <p>Proposals designed for corporate social responsibility programmes and company community investment initiatives.</p>
+                </div>
+                <div class="funding-card">
+                    <div class="icon">👤</div>
+                    <h3>Individual Funding</h3>
+                    <p>Clear, concise proposals for private individuals, diaspora supporters and philanthropists who want to back specific projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sectors & Project Types We Support</h2>
+                <div class="line"></div>
+                <p>We prepare proposals across a wide range of development and livelihood areas commonly funded in Papua New Guinea.</p>
+            </div>
+            <div class="sector-grid">
+                <div class="sector-card">
+                    <h3>🌾 Agriculture & Livestock</h3>
+                    <p>Crop production, livestock raising, poultry, smallholder support, training and input supply projects.</p>
+                </div>
+                <div class="sector-card">
+                    <h3>🐟 Fish Farming</h3>
+                    <p>Pond and cage aquaculture, hatchery support, community fish farming and related training.</p>
+                </div>
+                <div class="sector-card">
+                    <h3>☕ Coffee & Cocoa</h3>
+                    <p>Rehabilitation, quality improvement, farmer training, processing and market access initiatives.</p>
+                </div>
+                <div class="sector-card">
+                    <h3>🌴 Oil Palm & Vanilla</h3>
+                    <p>Smallholder development, extension support and value-chain strengthening projects.</p>
+                </div>
+                <div class="sector-card">
+                    <h3>☀️ Solar & Rural Electrification</h3>
+                    <p>Community solar systems, school and health facility electrification, and related training.</p>
+                </div>
+                <div class="sector-card">
+                    <h3>🛣️ Roads & Water Supply</h3>
+                    <p>Community access roads, footbridges, water supply systems and sanitation projects.</p>
+                </div>
+                <div class="sector-card">
+                    <h3>🏫 Schools & Aid Posts</h3>
+                    <p>Classroom construction, teacher housing, aid post upgrades and learning materials support.</p>
+                </div>
+                <div class="sector-card">
+                    <h3>🏪 Public Markets</h3>
+                    <p>Market infrastructure, vendor facilities and related community economic projects.</p>
+                </div>
+                <div class="sector-card">
+                    <h3>⛪ Church & Community Projects</h3>
+                    <p>Church buildings, community halls, youth centres and faith-based development activities.</p>
+                </div>
+                <div class="sector-card">
+                    <h3>🏨 Tourism & Agribusiness</h3>
+                    <p>Eco-tourism, guesthouses, value-added processing and small enterprise development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>What a Strong Proposal Contains</h2>
+                <div class="line"></div>
+                <p>While every proposal is tailored, most successful documents share a common structure that funders expect to see.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Core Sections We Typically Include</h3>
+                <ul>
+                    <li><strong>Cover page and summary</strong> – so a reviewer can quickly understand the request</li>
+                    <li><strong>Background and problem statement</strong> – why the project is needed</li>
+                    <li><strong>Project objectives and expected outcomes</strong> – what success looks like</li>
+                    <li><strong>Description of activities</strong> – what will actually be done</li>
+                    <li><strong>Implementation plan and timeline</strong> – how and when work will happen</li>
+                    <li><strong>Beneficiaries and location</strong> – who will benefit and where</li>
+                    <li><strong>Budget and justification</strong> – clear costs linked to activities</li>
+                    <li><strong>Management and sustainability</strong> – how the project will be run and continue after funding</li>
+                    <li><strong>Monitoring and reporting</strong> – how progress will be tracked</li>
+                    <li><strong>Organisational capacity</strong> – why your group is able to deliver</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>How We Work With You</h3>
+                <p>We do not invent projects. We take the real situation, goals and capacity of your group or business and present them in a professional format that funders can assess. The quality of the final proposal depends heavily on the information you provide.</p>
+                <p>During the process we will ask for details such as:</p>
+                <ul>
+                    <li>Current situation and the specific problem you want to address</li>
+                    <li>What you have already done or contributed</li>
+                    <li>Exact location and number of people who will benefit</li>
+                    <li>Realistic activities and estimated costs</li>
+                    <li>Who will manage the project day-to-day</li>
+                    <li>Any existing partnerships or support</li>
+                </ul>
+                <p>The more accurate and complete the information, the stronger and more credible the proposal becomes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Proposal Writing Process</h2>
+                <div class="line"></div>
+                <p>A straightforward process designed to produce a usable document without unnecessary delays.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <h4>Discussion</h4>
+                    <p>We discuss your project idea, target funder (if known) and the information you already have.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Information Gathering</h4>
+                    <p>We send a clear checklist of details needed and help you organise the facts.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Drafting</h4>
+                    <p>We write a full draft proposal structured for the intended audience.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Review & Refine</h4>
+                    <p>You review the draft. We revise based on your feedback until it is accurate and ready.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Final Delivery</h4>
+                    <p>You receive the completed proposal ready for submission or further adaptation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="content-block">
+                <h3>Important Notes About Funding Proposals</h3>
+                <p>Writing a strong proposal significantly improves your chances, but it does not guarantee funding. Final decisions rest with the funding body and depend on available budgets, priorities, competition and due diligence. Our role is to present your project clearly, honestly and professionally so it can be properly considered.</p>
+                <p>We encourage clients to be realistic about budgets, timelines and their own capacity to implement. Overly ambitious claims can damage credibility. A well-scoped, achievable project is usually more persuasive than an exaggerated one.</p>
+                <p>If you already have a draft or notes, we can also help strengthen and restructure existing material rather than starting from zero.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding-top:0;">
+        <div class="container">
+            <div class="cta-section">
+                <h2>Need a Professional Project Proposal?</h2>
+                <p>Tell us about your project. We will advise on the best approach and prepare a clear, funder-ready document.</p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                    <a href="https://wa.me/67572825257?text=Hello%20Kamea%20Tara%2C%20I%20need%20help%20with%20a%20project%20proposal" class="btn btn-outline" target="_blank">WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Kamea Tara Logo">
+                    <h3>Kamea Tara Business Consultant</h3>
+                    <p>PNG SME Support Services. Your trusted partner for business registration and project proposals across Papua New Guinea.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#business-name">Business Name Registration</a></li>
+                        <li><a href="services.html#company">Company Registration</a></li>
+                        <li><a href="services.html#association">Association Registration</a></li>
+                        <li><a href="proposals.html">Project Proposals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📞 Digicel: <a href="tel:+67579838762">7983 8762</a></li>
+                        <li>📱 Vodafone: <a href="tel:+67582699682">8269 9682</a></li>
+                        <li>💬 WhatsApp: <a href="https://wa.me/67572825257">7282 5257</a></li>
+                        <li>✉️ <a href="mailto:tarabusinessconsultant44@gmail.com">Email Us</a></li>
+                        <li>📍 Wewak Town Agent Available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Kamea Tara Business Consultant. All rights reserved.</span>
+                <span>Now serving Wewak Town & surrounding areas • Nationwide Online Service</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>

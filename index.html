@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamea Tara Business Consultant | SME Business Registration PNG</title>
+    <meta name="description" content="Kamea Tara Business Consultant – Professional SME Business Name Registration, Company Registration, Association Registration, Proposal Writing and Project Funding support across Papua New Guinea. Fast, Reliable & Professional.">
+    <meta name="keywords" content="SME registration PNG, IPA registration, company registration Papua New Guinea, business name registration, TIN registration, proposal writing PNG, Wewak, Lae">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <style>
+        :root {
+            --primary: #1b6b3a;
+            --primary-dark: #0f4a28;
+            --primary-light: #2e8b57;
+            --accent: #e8a317;
+            --accent-hover: #d4920f;
+            --accent-light: rgba(232, 163, 23, 0.15);
+            --blue: #1a5f9e;
+            --blue-dark: #0d3d6b;
+            --text: #1a1a2e;
+            --text-light: #4a5568;
+            --bg: #f7f9f8;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 4px 24px rgba(27, 107, 58, 0.08);
+            --shadow-lg: 0 12px 40px rgba(27, 107, 58, 0.14);
+            --radius: 14px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.7; padding-bottom: 80px; }
+        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; color: inherit; }
+
+        /* ========== FLOATING CONTACT BAR ========== */
+        .floating-contact {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            z-index: 9999;
+            box-shadow: 0 -4px 30px rgba(0,0,0,0.25);
+            padding: 10px 0;
+        }
+        .floating-contact .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .fc-left { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+        .fc-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+        .fc-item a { color: white; transition: color 0.2s; }
+        .fc-item a:hover { color: var(--accent); }
+        .fc-icon {
+            width: 32px; height: 32px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.95rem;
+        }
+        .fc-cta {
+            background: var(--accent);
+            color: var(--primary-dark);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s;
+            box-shadow: 0 4px 15px rgba(232,163,23,0.4);
+        }
+        .fc-cta:hover { background: #ffb82e; transform: translateY(-2px); }
+
+        /* WhatsApp floating button */
+        .wa-float {
+            position: fixed;
+            bottom: 80px;
+            right: 22px;
+            width: 60px; height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.45);
+            z-index: 9998;
+            transition: transform 0.25s;
+            animation: pulse-wa 2.5s infinite;
+        }
+        .wa-float:hover { transform: scale(1.1); }
+        .wa-float svg { width: 32px; height: 32px; fill: white; }
+        @keyframes pulse-wa {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* ========== HEADER ========== */
+        header { background: var(--primary); color: white; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 24px rgba(0,0,0,0.2); }
+        .header-top {
+            background: rgba(0,0,0,0.25);
+            padding: 7px 0;
+            font-size: 0.8rem;
+        }
+        .header-top .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+        .header-top a { color: rgba(255,255,255,0.9); }
+        .header-top a:hover { color: var(--accent); }
+        .nav-main { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo img {
+            width: 58px; height: 58px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: white;
+            padding: 3px;
+            box-shadow: 0 0 0 3px rgba(232,163,23,0.35);
+        }
+        .logo-text h1 { font-size: 1.22rem; font-weight: 800; line-height: 1.15; letter-spacing: 0.2px; }
+        .logo-text span { font-size: 0.68rem; opacity: 0.85; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; }
+
+        .desktop-nav { display: flex; list-style: none; gap: 2px; }
+        .desktop-nav a {
+            color: rgba(255,255,255,0.9); padding: 8px 13px; border-radius: 7px;
+            font-size: 0.88rem; font-weight: 500; transition: all 0.2s;
+        }
+        .desktop-nav a:hover, .desktop-nav a.active { background: rgba(255,255,255,0.14); color: white; }
+
+        .mobile-toggle {
+            display: none; background: none; border: none; color: white;
+            font-size: 1.7rem; cursor: pointer; padding: 6px;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none; position: fixed; inset: 0; z-index: 2000;
+            background: var(--primary-dark); flex-direction: column; overflow-y: auto;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .mobile-close { background: none; border: none; color: white; font-size: 1.9rem; cursor: pointer; }
+        .mobile-nav { list-style: none; padding: 16px 12px 30px; }
+        .mobile-nav a {
+            display: block; color: white; padding: 14px 16px; font-size: 1.08rem;
+            font-weight: 500; border-radius: 8px;
+        }
+        .mobile-nav a:hover, .mobile-nav a.active { background: rgba(255,255,255,0.1); }
+        .mobile-contact-block {
+            margin: 10px 20px 30px; padding: 18px; background: rgba(255,255,255,0.08);
+            border-radius: 12px; color: rgba(255,255,255,0.9); font-size: 0.92rem;
+        }
+        .mobile-contact-block a { color: var(--accent); font-weight: 600; }
+
+        /* ========== HERO ========== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 45%, var(--blue) 100%);
+            color: white;
+            padding: 70px 0 90px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.6;
+        }
+        .hero .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
+        .hero-badge {
+            display: inline-block; background: var(--accent); color: var(--primary-dark);
+            padding: 6px 16px; border-radius: 50px; font-size: 0.78rem; font-weight: 700;
+            letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 18px;
+        }
+        .hero h2 { font-size: 2.55rem; font-weight: 800; line-height: 1.18; margin-bottom: 18px; }
+        .hero h2 span { color: var(--accent); }
+        .hero p { font-size: 1.12rem; opacity: 0.92; margin-bottom: 28px; max-width: 520px; }
+        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 26px; border-radius: 50px; font-weight: 700; font-size: 0.95rem;
+            transition: all 0.25s; border: 2px solid transparent;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary-dark); }
+        .btn-primary:hover { background: #ffb82e; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(232,163,23,0.4); }
+        .btn-outline { background: transparent; border-color: rgba(255,255,255,0.5); color: white; }
+        .btn-outline:hover { background: rgba(255,255,255,0.12); border-color: white; }
+        .hero-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 20px;
+            padding: 28px;
+        }
+        .hero-card h3 { font-size: 1.15rem; margin-bottom: 16px; color: var(--accent); }
+        .hero-card ul { list-style: none; }
+        .hero-card li {
+            padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex; align-items: center; gap: 10px; font-size: 0.95rem;
+        }
+        .hero-card li:last-child { border-bottom: none; }
+        .hero-card li span { color: var(--accent); font-weight: 700; }
+
+        /* ========== SECTIONS ========== */
+        section { padding: 70px 0; }
+        .section-title { text-align: center; margin-bottom: 48px; }
+        .section-title h2 { font-size: 2rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 12px; }
+        .section-title .line {
+            width: 70px; height: 4px; background: var(--accent); margin: 0 auto 16px; border-radius: 2px;
+        }
+        .section-title p { color: var(--text-light); max-width: 620px; margin: 0 auto; font-size: 1.05rem; }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .service-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+        .service-card .num {
+            position: absolute; top: 18px; right: 20px;
+            font-size: 2.8rem; font-weight: 800; color: rgba(27,107,58,0.08); line-height: 1;
+        }
+        .service-card .icon {
+            width: 54px; height: 54px; background: var(--accent-light);
+            border-radius: 14px; display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; margin-bottom: 18px;
+        }
+        .service-card h3 { font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 12px; }
+        .service-card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 16px; }
+        .service-card ul { list-style: none; margin-bottom: 18px; }
+        .service-card li {
+            padding: 6px 0; font-size: 0.92rem; color: var(--text);
+            display: flex; align-items: flex-start; gap: 8px;
+        }
+        .service-card li::before { content: "✓"; color: var(--primary); font-weight: 700; flex-shrink: 0; }
+        .service-card .more { color: var(--primary); font-weight: 600; font-size: 0.92rem; }
+
+        /* Why Choose */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+        }
+        .why-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 26px 22px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        .why-card .icon {
+            width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; margin: 0 auto 16px;
+        }
+        .why-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--primary-dark); }
+        .why-card p { font-size: 0.92rem; color: var(--text-light); }
+
+        /* Process Steps */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            counter-reset: step;
+        }
+        .process-step {
+            background: white;
+            border-radius: var(--radius);
+            padding: 24px 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            position: relative;
+            text-align: center;
+        }
+        .process-step::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            top: -16px; left: 50%; transform: translateX(-50%);
+            width: 36px; height: 36px;
+            background: var(--accent);
+            color: var(--primary-dark);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(232,163,23,0.4);
+        }
+        .process-step h4 { margin-top: 12px; margin-bottom: 8px; color: var(--primary-dark); font-size: 1.05rem; }
+        .process-step p { font-size: 0.9rem; color: var(--text-light); }
+
+        /* Stats */
+        .stats-bar {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 50px 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .stat-item h3 { font-size: 2.4rem; font-weight: 800; color: var(--accent); margin-bottom: 6px; }
+        .stat-item p { font-size: 0.95rem; opacity: 0.9; }
+
+        /* Proposals Preview */
+        .proposals-bg {
+            background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+            color: white;
+            border-radius: 20px;
+            padding: 48px 40px;
+            text-align: center;
+        }
+        .proposals-bg h3 { font-size: 1.6rem; margin-bottom: 12px; }
+        .proposals-bg p { opacity: 0.9; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .prop-tags {
+            display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 10px;
+        }
+        .prop-tags span {
+            background: rgba(255,255,255,0.12);
+            padding: 8px 16px; border-radius: 50px; font-size: 0.88rem;
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+
+        /* Testimonials */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        .testimonial-card .stars { color: var(--accent); font-size: 1.1rem; margin-bottom: 12px; }
+        .testimonial-card p { font-style: italic; color: var(--text-light); margin-bottom: 18px; font-size: 0.98rem; }
+        .testimonial-card .author { font-weight: 700; color: var(--primary-dark); }
+        .testimonial-card .role { font-size: 0.85rem; color: var(--text-light); }
+
+        /* FAQ */
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item {
+            background: white;
+            border-radius: var(--radius);
+            margin-bottom: 14px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+        .faq-item summary {
+            padding: 18px 22px;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primary-dark);
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 1.4rem; color: var(--accent); font-weight: 700; }
+        .faq-item[open] summary::after { content: "−"; }
+        .faq-item .answer {
+            padding: 0 22px 20px;
+            color: var(--text-light);
+            font-size: 0.96rem;
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .cta-section h2 { font-size: 1.9rem; margin-bottom: 14px; }
+        .cta-section p { opacity: 0.92; margin-bottom: 26px; max-width: 560px; margin-left: auto; margin-right: auto; }
+
+        /* Long content blocks */
+        .content-block {
+            background: white;
+            border-radius: var(--radius);
+            padding: 36px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+        .content-block h3 { color: var(--primary-dark); font-size: 1.35rem; margin-bottom: 16px; }
+        .content-block p { color: var(--text-light); margin-bottom: 14px; }
+        .content-block ul, .content-block ol { margin: 14px 0 14px 22px; color: var(--text-light); }
+        .content-block li { margin-bottom: 8px; }
+
+        /* Two column */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Agent highlight */
+        .agent-box {
+            background: linear-gradient(135deg, #f8f4e8, #fff9e6);
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 28px;
+            margin: 30px 0;
+        }
+        .agent-box h3 { color: var(--primary-dark); margin-bottom: 12px; }
+        .agent-box .agent-details { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 16px; }
+        .agent-box .agent-details div { display: flex; align-items: center; gap: 8px; font-weight: 500; }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: rgba(255,255,255,0.85);
+            padding: 60px 0 100px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand img {
+            width: 70px; height: 70px; border-radius: 50%; background: white; padding: 4px; margin-bottom: 14px;
+        }
+        .footer-brand h3 { color: white; font-size: 1.15rem; margin-bottom: 10px; }
+        .footer-brand p { font-size: 0.9rem; opacity: 0.8; line-height: 1.6; }
+        .footer-col h4 { color: var(--accent); font-size: 1rem; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; font-size: 0.9rem; }
+        .footer-col a:hover { color: var(--accent); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.85rem;
+            opacity: 0.75;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero .container { grid-template-columns: 1fr; }
+            .two-col { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .desktop-nav { display: none; }
+            .mobile-toggle { display: block; }
+        }
+        @media (max-width: 600px) {
+            .hero h2 { font-size: 1.85rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .fc-left { display: none; }
+            .floating-contact .container { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- FLOATING CONTACT BAR -->
+    <div class="floating-contact">
+        <div class="container">
+            <div class="fc-left">
+                <div class="fc-item">
+                    <div class="fc-icon">📞</div>
+                    <a href="tel:+67579838762">7983 8762</a>
+                </div>
+                <div class="fc-item">
+                    <div class="fc-icon">💬</div>
+                    <a href="https://wa.me/67572825257" target="_blank">WhatsApp 7282 5257</a>
+                </div>
+                <div class="fc-item">
+                    <div class="fc-icon">📍</div>
+                    <span>Lae & Wewak Town</span>
+                </div>
+            </div>
+            <a href="https://wa.me/67572825257?text=Hello%20Kamea%20Tara%2C%20I%20need%20help%20with%20business%20registration" class="fc-cta" target="_blank">
+                Register Now →
+            </a>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/67572825257?text=Hello%20Kamea%20Tara%2C%20I%20need%20help%20with%20business%20registration" class="wa-float" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div>Your trusted partner for business registration & project proposals</div>
+                <div>
+                    <a href="tel:+67579838762">📞 7983 8762</a> &nbsp;|&nbsp;
+                    <a href="https://wa.me/67572825257" target="_blank">WhatsApp 7282 5257</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="nav-main">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Kamea Tara Logo">
+                    <div class="logo-text">
+                        <h1>Kamea Tara</h1>
+                        <span>Business Consultant</span>
+                    </div>
+                </a>
+                <ul class="desktop-nav">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="proposals.html">Proposals</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-toggle" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" style="width:48px;height:48px;">
+                <div class="logo-text">
+                    <h1 style="font-size:1.1rem;">Kamea Tara</h1>
+                    <span>Business Consultant</span>
+                </div>
+            </div>
+            <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">×</button>
+        </div>
+        <ul class="mobile-nav">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="proposals.html">Proposals</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-contact-block">
+            <strong>Quick Contact</strong><br>
+            Digicel: <a href="tel:+67579838762">7983 8762</a><br>
+            WhatsApp: <a href="https://wa.me/67572825257">7282 5257</a><br>
+            Email: <a href="mailto:tarabusinessconsultant44@gmail.com">tarabusinessconsultant44@gmail.com</a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div>
+                <div class="hero-badge">SME Business Registration Available</div>
+                <h2>Register Your Business<br><span>Fast • Reliable • Professional</span></h2>
+                <p>Kamea Tara Business Consultant is your trusted partner for complete SME registration services across Papua New Guinea. From Business Name and Company Registration to Association setup, Constitution writing and professional Project Proposals — we handle everything so you can focus on growing your business.</p>
+                <div class="hero-btns">
+                    <a href="services.html" class="btn btn-primary">View Our Services</a>
+                    <a href="https://wa.me/67572825257?text=Hello%20Kamea%20Tara%2C%20I%20need%20help%20with%20business%20registration" class="btn btn-outline" target="_blank">WhatsApp Us Now</a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <h3>What We Offer</h3>
+                <ul>
+                    <li><span>1</span> Business Name Registration</li>
+                    <li><span>2</span> Company Registration</li>
+                    <li><span>3</span> Proposal Writing</li>
+                    <li><span>4</span> Constitution Write-Up</li>
+                    <li><span>5</span> Association Registration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES OVERVIEW -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Registration Services</h2>
+                <div class="line"></div>
+                <p>Complete end-to-end support for individuals, groups and organisations looking to formalise their operations in Papua New Guinea.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="num">01</div>
+                    <div class="icon">📝</div>
+                    <h3>Business Name Registration</h3>
+                    <p>Start your sole trader or partnership business the right way with full IPA and IRC compliance.</p>
+                    <ul>
+                        <li>IPA Business Name Registration</li>
+                        <li>IRC TIN Registration</li>
+                        <li>Professional Logo Design</li>
+                        <li>Letterhead Design</li>
+                        <li>Business Profile Development</li>
+                        <li>Bank Account Opening Assistance</li>
+                    </ul>
+                    <a href="services.html#business-name" class="more">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="num">02</div>
+                    <div class="icon">🏢</div>
+                    <h3>Company Registration</h3>
+                    <p>Incorporate your limited company with all required documents and official certificates.</p>
+                    <ul>
+                        <li>IPA Company Registration</li>
+                        <li>IRC TIN Certificate</li>
+                        <li>Logo & Brand Identity</li>
+                        <li>Letterhead Design</li>
+                        <li>Company Profile Development</li>
+                    </ul>
+                    <a href="services.html#company" class="more">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="num">03</div>
+                    <div class="icon">📋</div>
+                    <h3>Proposal Writing</h3>
+                    <p>Professionally written funding proposals ready for government, donor, corporate and individual funders.</p>
+                    <ul>
+                        <li>Government Funding Proposals</li>
+                        <li>Donor / NGO Funding</li>
+                        <li>Corporate Social Responsibility</li>
+                        <li>Individual Investor Proposals</li>
+                    </ul>
+                    <a href="proposals.html" class="more">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="num">04</div>
+                    <div class="icon">📜</div>
+                    <h3>Constitution Write-Up</h3>
+                    <p>Properly structured constitutions that meet IPA requirements for groups and societies.</p>
+                    <ul>
+                        <li>Business Group Constitutions</li>
+                        <li>Corporate Society Rules</li>
+                        <li>Association Constitutions</li>
+                    </ul>
+                    <a href="services.html#constitution" class="more">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="num">05</div>
+                    <div class="icon">🤝</div>
+                    <h3>Association Registration</h3>
+                    <p>Full registration package for associations including lodgement, advertising and all supporting documents.</p>
+                    <ul>
+                        <li>Lodgement & IPA Certificates</li>
+                        <li>Advertisement for Objection</li>
+                        <li>IRC TIN</li>
+                        <li>Logo & Letterhead</li>
+                        <li>Profile & Constitution</li>
+                        <li>Account Opening Support</li>
+                    </ul>
+                    <a href="services.html#association" class="more">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Kamea Tara?</h2>
+                <div class="line"></div>
+                <p>We make formalising your business simple, transparent and stress-free — whether you are in Lae, Wewak or anywhere else in Papua New Guinea.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="icon">⚡</div>
+                    <h3>Fast Turnaround</h3>
+                    <p>We prioritise speed without cutting corners. Most registrations are processed efficiently so you can start operating sooner.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon">🛡️</div>
+                    <h3>Reliable & Compliant</h3>
+                    <p>Every document is prepared according to current IPA and IRC requirements. We stay updated with regulatory changes.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon">💼</div>
+                    <h3>Professional Service</h3>
+                    <p>From logo design to constitution writing and funding proposals — we deliver polished, professional results every time.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon">🌐</div>
+                    <h3>Nationwide Reach</h3>
+                    <p>Full online services for clients outside Lae. Dedicated agent available in Wewak Town for face-to-face support.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon">🤝</div>
+                    <h3>End-to-End Support</h3>
+                    <p>We don’t just lodge papers. We guide you through logo, letterhead, profile, bank account and ongoing compliance.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon">💰</div>
+                    <h3>Affordable Packages</h3>
+                    <p>Transparent pricing designed for SMEs, community groups and first-time entrepreneurs across Papua New Guinea.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>How the Registration Process Works</h2>
+                <div class="line"></div>
+                <p>A clear, step-by-step process so you always know what is happening with your application.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <h4>Initial Consultation</h4>
+                    <p>Contact us via WhatsApp, call or email. Tell us what type of registration or proposal you need.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Document Checklist</h4>
+                    <p>We send you a clear list of required documents and information. We help you prepare anything missing.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Preparation & Design</h4>
+                    <p>We draft your application, constitution (if needed), logo, letterhead and business profile.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Lodgement</h4>
+                    <p>We lodge everything with IPA and IRC on your behalf and track the progress until certificates are issued.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Handover & Support</h4>
+                    <p>You receive all official documents plus ongoing advice on bank accounts, compliance and next steps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>5+</h3>
+                    <p>Core Service Areas</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Online Service Available</p>
+                </div>
+                <div class="stat-item">
+                    <h3>2</h3>
+                    <p>Service Locations (Lae & Wewak)</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>WhatsApp Support Access</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DETAILED VALUE SECTION -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Formal Registration Matters in Papua New Guinea</h2>
+                <div class="line"></div>
+                <p>Operating without proper registration limits your opportunities. Here’s why formalising your business or group is one of the best decisions you can make.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Access to Banking and Finance</h3>
+                <p>Most commercial banks in Papua New Guinea require a valid IPA certificate and IRC TIN before they will open a business account. Without these documents, you cannot easily receive payments from government contracts, donors, or larger clients. A registered business also makes it far easier to apply for loans, grants and supplier credit.</p>
+                <p>Kamea Tara assists with the full package — registration plus practical guidance on approaching banks — so you can start receiving and managing funds professionally from day one.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Eligibility for Government and Donor Funding</h3>
+                <p>Almost every government funding window, provincial development program, and international donor requires applicants to be formally registered. Whether you are applying for agricultural support, community infrastructure, women’s economic empowerment, or youth enterprise funding, the first filter is almost always: “Are you registered with IPA?”</p>
+                <p>Our proposal writing service is designed specifically around these requirements. We prepare documents that speak the language of government agencies and donor organisations while remaining honest and realistic about your capacity and objectives.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Legal Protection and Credibility</h3>
+                <p>A registered business name or company gives you legal standing. It protects your trading name, allows you to enter into contracts, and presents a professional image to clients, partners and suppliers. Associations and business groups that are properly constituted and registered can open accounts in the group’s name, receive grants, and operate with clear rules that protect members.</p>
+                <p>We prepare constitutions that are practical, fair, and compliant with IPA expectations — reducing the risk of future internal disputes.</p>
+            </div>
+
+            <div class="two-col" style="margin-top: 30px;">
+                <div class="content-block" style="margin-bottom:0;">
+                    <h3>Who We Serve</h3>
+                    <ul>
+                        <li>First-time entrepreneurs and sole traders</li>
+                        <li>Family businesses looking to formalise</li>
+                        <li>Women’s groups and cooperatives</li>
+                        <li>Youth associations and community organisations</li>
+                        <li>Churches and faith-based groups</li>
+                        <li>Agricultural and resource-based enterprises</li>
+                        <li>Existing businesses needing re-registration or updates</li>
+                        <li>Project teams seeking funding proposals</li>
+                    </ul>
+                </div>
+                <div class="content-block" style="margin-bottom:0;">
+                    <h3>Common Challenges We Solve</h3>
+                    <ul>
+                        <li>Confusion about which type of registration is right</li>
+                        <li>Incomplete or rejected IPA applications</li>
+                        <li>Difficulty writing a clear constitution</li>
+                        <li>No professional logo or letterhead</li>
+                        <li>Weak or generic funding proposals</li>
+                        <li>Distance from Lae or Port Moresby offices</li>
+                        <li>Lack of time to follow up on lodgements</li>
+                        <li>Uncertainty about bank account requirements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WEWAK AGENT -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Now Serving Wewak Town & Surrounding Areas</h2>
+                <div class="line"></div>
+                <p>We have expanded our reach so clients in East Sepik and nearby provinces can access the same professional service.</p>
+            </div>
+            <div class="agent-box">
+                <h3>📍 Contact Our Agent in Wewak Town</h3>
+                <p>For face-to-face support, document collection and local guidance, our dedicated agent is ready to assist you.</p>
+                <div class="agent-details">
+                    <div><strong>Name:</strong> Mr Caspar Sangin</div>
+                    <div><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/67572825257" style="color:var(--primary);">7282 5257</a></div>
+                    <div><strong>Location:</strong> Wewak Town</div>
+                </div>
+                <p style="margin-top:18px; font-size:0.95rem;">Lae clients can still meet us in person or register fully online. Outside Lae — including Wewak and all other provinces — full online services are available for fast and convenient registration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPOSALS PREVIEW -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Project Proposals Available</h2>
+                <div class="line"></div>
+                <p>We prepare professional funding proposals tailored for government, donor, corporate and individual funding sources.</p>
+            </div>
+            <div class="proposals-bg">
+                <h3>Agriculture • Infrastructure • Community Development</h3>
+                <p>Ready-to-submit proposals that clearly present your project objectives, budget, implementation plan and expected impact.</p>
+                <div class="prop-tags">
+                    <span>🌾 Agriculture & Livestock</span>
+                    <span>🐟 Fish Farming</span>
+                    <span>☕ Coffee & Cocoa</span>
+                    <span>🌴 Oil Palm & Vanilla</span>
+                    <span>☀️ Solar & Rural Electrification</span>
+                    <span>🛣️ Roads & Water Supply</span>
+                    <span>🏫 Schools & Aid Posts</span>
+                    <span>🏪 Public Markets</span>
+                    <span>⛪ Church & Community Projects</span>
+                    <span>🏨 Tourism & Agribusiness</span>
+                </div>
+                <div style="margin-top: 28px;">
+                    <a href="proposals.html" class="btn btn-primary">Explore All Proposal Types</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <div class="line"></div>
+                <p>Real feedback from people and groups we have helped formalise and fund their initiatives.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>“Kamea Tara made the whole company registration process simple. We received our certificates and a professional logo package. Highly recommended for anyone starting a business in PNG.”</p>
+                    <div class="author">Business Owner</div>
+                    <div class="role">Lae, Morobe Province</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>“Our women’s association needed a proper constitution and IPA registration. The team guided us every step and even helped with the bank account. Very professional and patient.”</p>
+                    <div class="author">Association Chairlady</div>
+                    <div class="role">East Sepik Province</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>“The funding proposal they prepared for our agriculture project was clear and well structured. We were able to submit it with confidence. Thank you Kamea Tara.”</p>
+                    <div class="author">Project Coordinator</div>
+                    <div class="role">Community Group</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <div class="line"></div>
+                <p>Answers to the questions we hear most often from clients across Papua New Guinea.</p>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>How long does business name or company registration usually take?</summary>
+                    <div class="answer">Processing times depend on IPA and IRC workloads, completeness of documents, and whether any name objections arise. We prepare everything carefully to minimise delays and keep you updated throughout. Many clients receive their documents within a reasonable timeframe once all requirements are met.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I register if I live outside Lae or Port Moresby?</summary>
+                    <div class="answer">Yes. We offer full online services for clients anywhere in Papua New Guinea. Documents can be shared digitally, and we handle lodgement on your behalf. For those in Wewak Town and surrounding areas, our local agent Mr Caspar Sangin can provide face-to-face assistance.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>What is the difference between a Business Name and a Company?</summary>
+                    <div class="answer">A Business Name is typically used by sole traders or partnerships and is simpler and lower cost. A Company (usually a limited company) is a separate legal entity, offers limited liability protection, and is often preferred when seeking larger contracts, investors or formal partnerships. We can advise which structure suits your goals.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Do you help with logo and letterhead as well?</summary>
+                    <div class="answer">Yes. Most of our registration packages include professional logo design and letterhead design so you can start presenting your business properly from day one. We also develop a basic business or association profile when required.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can you help us open a bank account after registration?</summary>
+                    <div class="answer">We provide practical assistance and guidance on the documents banks typically require. Once you have your IPA certificate and TIN, the process becomes much smoother. We can advise on common requirements and help you prepare.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>What information do you need to start a funding proposal?</summary>
+                    <div class="answer">We usually need a clear description of the project, the problem it addresses, intended beneficiaries, location, estimated budget, and any existing activities or partnerships. The more detail you can provide, the stronger the proposal will be. We guide you through the information gathering process.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>How do I get started?</summary>
+                    <div class="answer">Simply message us on WhatsApp at 7282 5257, call Digicel 7983 8762 or Vodafone 8269 9682, or email tarabusinessconsultant44@gmail.com. Tell us what you need and we will respond with the next steps and a clear checklist.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section>
+        <div class="container">
+            <div class="cta-section">
+                <h2>Register Your Business or Project Proposal Today</h2>
+                <p>Fast • Reliable • Professional. Whether you are in Lae, Wewak or anywhere in PNG – we are ready to assist you.</p>
+                <div class="hero-btns" style="justify-content:center;">
+                    <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
+                    <a href="https://wa.me/67572825257?text=Hello%20Kamea%20Tara%2C%20I%20need%20help%20with%20business%20registration" class="btn btn-outline" target="_blank">WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Kamea Tara Logo">
+                    <h3>Kamea Tara Business Consultant</h3>
+                    <p>PNG SME Support Services. Your trusted partner for business registration and project proposals across Papua New Guinea.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#business-name">Business Name Registration</a></li>
+                        <li><a href="services.html#company">Company Registration</a></li>
+                        <li><a href="services.html#association">Association Registration</a></li>
+                        <li><a href="proposals.html">Project Proposals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📞 Digicel: <a href="tel:+67579838762">7983 8762</a></li>
+                        <li>📱 Vodafone: <a href="tel:+67582699682">8269 9682</a></li>
+                        <li>💬 WhatsApp: <a href="https://wa.me/67572825257">7282 5257</a></li>
+                        <li>✉️ <a href="mailto:tarabusinessconsultant44@gmail.com">tarabusinessconsultant44@gmail.com</a></li>
+                        <li>📍 Wewak Town Agent Available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Kamea Tara Business Consultant. All rights reserved.</span>
+                <span>Now serving Wewak Town & surrounding areas • Nationwide Online Service</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>
